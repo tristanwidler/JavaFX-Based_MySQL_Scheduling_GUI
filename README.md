@@ -56,8 +56,17 @@ Within the IntelliJ IDE:
  - *Connection Username*: **sqlUser**
  - *Connection Password*: **Passw0rd!**
  
- An Enhanced Entity Ralationship Diagram file has been included in this repository. Use MySQL Workbench to open it and forward engineer a locally hosted database with the aforementioned attributes.
+An Enhanced Entity Ralationship Diagram file has been included in this repository. Use MySQL Workbench to open it and forward engineer a locally hosted database with the aforementioned attributes.
  - **Note:** MySQL Workbench V.8.0 was used to create this for the project. User aother versions at your discretion.
+ 
+At least one entry must exist in the "users", "countries", "contacts", and "first_level_divisions" tables for the program to function correctly. 
+You may use the following statements to get started:
+- INSERT INTO users VALUES(null, 'name', 'password', NOW(), 'admin', NOW(), 'admin');
+- INSERT INTO countries VALUES(null, 'U.S.', NOW(), 'admin', NOW(), 'admin');
+- INSERT INTO contacts VALUES(null, 'Takeshi Negata', 'tnegata@company.com');
+- INSERT INTO first_level-divisions VALUES (null, 'Alabama', NOW(), 'admin', NOW(), 'admin', 1);
+
+The "appointments" and "customers" tables will be modified by the project program and as such do not need any entries to start.
 
 The "***src/models/JDBC.java***" file can be modified to fit your connection needs.
 
